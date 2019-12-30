@@ -3,29 +3,32 @@
 #include <functional>
 #include <vector>
 
-template<typename ...Args>
-class Signal
+namespace sr
 {
-public:
-    void connect(std::function<void(Args...)> slot)
+    template<typename ...Args>
+    class Signal
     {
-        slots.push_back(slot);
-    }
-
-    void operator()(Args... args)
-    {
-        for(auto& slot : slots)
+    public:
+        void connect(std::function<void(Args...)> slot)
         {
-            slot(args...);
+            slots.push_back(slot);
         }
-    }
 
-    void disconnect()
-    {
-        slots.clear();
-    }
-private:
-    std::vector<std::function<void(Args...)>> slots;
-};
+        void operator()(Args... args)
+        {
+            for(auto& slot : slots)
+            {
+                slot(args...);
+            }
+        }
+
+        void disconnect()
+        {
+            slots.clear();
+        }
+    private:
+        std::vector<std::function<void(Args...)>> slots;
+    };
+}
 
 #endif
