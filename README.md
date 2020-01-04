@@ -7,6 +7,6 @@ Yet another renderer I write. Suppose, this will do better than others <br/><hr/
 * ???
 ### Objectives and tasks:<br/>
 - [x] Create signal-slot system
-- [ ] Create filesystem interaction functions
-- [ ] Create json-based config system
+- [x] Create filesystem interaction functions
+- [x] Create json-based config system
 - [ ] Create working example
