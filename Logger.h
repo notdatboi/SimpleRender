@@ -2,7 +2,7 @@
 #define SIMPLERENDER_LOGGER_H
 
 #include <string>
-#include <stdio.h>
+#include <cstdio>
 
 namespace sr
 {
