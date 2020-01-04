@@ -1,5 +1,5 @@
-#ifndef SIGNAL_HPP
-#define SIGNAL_HPP
+#ifndef SIMPLERENDER_SIGNAL_HPP
+#define SIMPLERENDER_SIGNAL_HPP
 #include <functional>
 #include <vector>
 
